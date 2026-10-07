@@ -17,14 +17,14 @@ const (
 // string field can be distinguished from JSON true.
 type node struct {
 	kind nkind
-	str  string       // scalar text
-	arr  []*node      // nArr elements
-	obj  []objMember  // nObj members, in document order
+	str  string      // scalar text
+	arr  []*node     // nArr elements
+	obj  []objMember // nObj members, in document order
 }
 
 type objMember struct {
-	key  string
-	val  *node
+	key string
+	val *node
 }
 
 func (n *node) field(name string) *node {
@@ -37,18 +37,4 @@ func (n *node) field(name string) *node {
 		}
 	}
 	return nil
-}
-
-// normalizeCatalog validates a catalog tree and converts it to the model.
-func normalizeCatalog(root *node, origin string) (interface{}, []*RejectError) {
-	_ = root
-	_ = origin
-	return nil, nil
-}
-
-// normalizeSchema validates a single-schema tree and converts it to the model.
-func normalizeSchema(root *node, origin string) (interface{}, []*RejectError) {
-	_ = root
-	_ = origin
-	return nil, nil
 }

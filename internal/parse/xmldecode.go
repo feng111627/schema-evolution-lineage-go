@@ -20,7 +20,7 @@ var (
 		"name": true, "id": true, "type": true,
 		"nullable": true, "has_default": true,
 	}
-	xmlSourceAttrs = map[string]bool{"dataset": true, "column": true}
+	xmlSourceAttrs = map[string]bool{"ref": true}
 	xmlAliasAttrs  = map[string]bool{"name": true}
 )
 
@@ -123,7 +123,15 @@ func readXMLBody(dec *xml.Decoder, start xml.StartElement, parent *sink) (*node,
 			if cerr != nil {
 				return nil, name, cerr
 			}
-			if child != nil && !wrapper {
+			if wrapper {
+				// We returned no node for this wrapper, so the child has not
+				// been attached anywhere yet: sink it straight into our
+				// logical parent (e.g. a <column> inside <columns> lands on
+				// the enclosing <schema>).
+				if child != nil && parent != nil {
+					placeXMLChild(parent.n, parent.tag, childTag, child)
+				}
+			} else if child != nil {
 				placeXMLChild(n, name, childTag, child)
 			}
 		case xml.CharData:
