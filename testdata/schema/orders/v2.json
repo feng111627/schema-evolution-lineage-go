@@ -1,0 +1,10 @@
+{
+  "schema": "orders",
+  "version": "v2",
+  "columns": [
+    {"name": "id", "type": "long", "nullable": false},
+    {"name": "amount_cents", "type": "double", "nullable": true, "renamed_from": "amount"},
+    {"name": "status", "type": "string", "nullable": false},
+    {"name": "created_at", "type": "date", "nullable": true}
+  ]
+}

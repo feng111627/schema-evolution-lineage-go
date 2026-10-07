@@ -1,0 +1,6 @@
+{
+  "edges": [
+    {"target": "net", "sources": ["gross", "tax"]},
+    {"target": "net", "sources": ["gross", "discount"]}
+  ]
+}

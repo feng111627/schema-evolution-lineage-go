@@ -1,0 +1,7 @@
+{
+  "edges": [
+    {"target": "net", "sources": ["gross", "tax"]},
+    {"target": "gross", "sources": ["unit_price", "qty"]},
+    {"target": "tax", "sources": ["gross", "rate"]}
+  ]
+}

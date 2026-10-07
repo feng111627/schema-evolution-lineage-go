@@ -1,0 +1,10 @@
+{
+  "schema": "orders",
+  "version": "v1",
+  "columns": [
+    {"name": "id", "type": "long", "nullable": false},
+    {"name": "amount", "type": "long", "nullable": true},
+    {"name": "status", "type": "string", "nullable": true},
+    {"name": "legacy_note", "type": "string", "nullable": true}
+  ]
+}

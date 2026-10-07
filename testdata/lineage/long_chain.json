@@ -1,0 +1,9 @@
+{
+  "edges": [
+    {"target": "n5", "sources": ["n4"]},
+    {"target": "n4", "sources": ["n3"]},
+    {"target": "n3", "sources": ["n2"]},
+    {"target": "n2", "sources": ["n1"]},
+    {"target": "n1", "sources": ["root_a", "root_b"]}
+  ]
+}
