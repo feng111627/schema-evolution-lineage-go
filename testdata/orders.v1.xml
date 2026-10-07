@@ -1,6 +1,8 @@
 <schema name="orders">
   <columns>
-    <column name="order_id" id="col-order-id" type="long" nullable="false"/>
-    <column name="amount_cny" id="col-amount" type="int" nullable="false"/>
+    <column name="order_id"   id="col-order-id" type="long"   nullable="false"/>
+    <column name="user_id"    id="col-user-id"  type="long"   nullable="false"/>
+    <column name="amount_cny" id="col-amount"   type="int"    nullable="false"/>
+    <column name="note"       id="col-note"     type="string" nullable="true"/>
   </columns>
 </schema>

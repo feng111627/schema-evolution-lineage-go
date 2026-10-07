@@ -380,18 +380,6 @@ func rejectUnknownMembers(n *node, path string, allowed map[string]bool, errs []
 	return errs
 }
 
-func requireString(n *node, path string, errs *[]*RejectError) (string, bool) {
-	if n.kind != nStr {
-		*errs = append(*errs, &RejectError{
-			Reason:  ReasonTypeMismatch,
-			Path:    path,
-			Message: "value must be a string",
-		})
-		return "", false
-	}
-	return n.str, true
-}
-
 func requiredNonEmptyString(obj *node, key, path string, errs *[]*RejectError) (string, bool) {
 	n := obj.field(key)
 	if n == nil {
