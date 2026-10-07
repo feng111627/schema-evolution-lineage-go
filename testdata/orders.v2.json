@@ -1,0 +1,10 @@
+{
+  "name": "orders",
+  "columns": [
+    {"name": "order_id",    "id": "col-order-id", "type": "long",   "nullable": false},
+    {"name": "user_key",    "id": "col-user-id",  "type": "long",   "nullable": false},
+    {"name": "amount_cny",  "id": "col-amount",   "type": "double", "nullable": false},
+    {"name": "channel",     "id": "col-channel",  "type": "string", "nullable": true},
+    {"name": "created_at",  "id": "col-created",  "type": "string", "nullable": false}
+  ]
+}

@@ -1,0 +1,10 @@
+<catalog>
+  <schemas>
+    <schema name="users">
+      <columns>
+        <column name="id"   id="u-id" type="long"   nullable="false"/>
+        <column name="name" id="u-name" type="string" nullable="true"/>
+      </columns>
+    </schema>
+  </schemas>
+</catalog>

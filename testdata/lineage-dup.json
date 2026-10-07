@@ -1,0 +1,16 @@
+{
+  "schemas": [
+    {
+      "name": "payments",
+      "columns": [
+        {"name": "cents", "type": "long"}
+      ]
+    },
+    {
+      "name": "orders",
+      "columns": [
+        {"name": "amount", "type": "double", "sources": ["payments.cents", "payments.cents"]}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schemas": [
+    {
+      "name": "d",
+      "columns": [
+        {"name": "a", "type": "string", "sources": ["d.b"]},
+        {"name": "b", "type": "string", "sources": ["d.c"]},
+        {"name": "c", "type": "string", "sources": ["d.a"]}
+      ]
+    }
+  ]
+}

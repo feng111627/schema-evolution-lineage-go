@@ -1,0 +1,9 @@
+{
+  "name": "bad",
+  "columns": [
+    {"name": "ok",  "type": "long"},
+    {"name": "bad", "type": "bytes", "nullable": "yes"},
+    {"type": "int"},
+    {"name": "src", "type": "int", "sources": ["no-dot-here"]}
+  ]
+}
